@@ -31,13 +31,13 @@
 
     <div id="form-space" class="bg-white w-50 mx-auto px-5 rounded-3 shadow">
       <div class="progress-bar">
-        <span class="progress-bar-step">1</span>
-        <span class="progress-line"></span>
-        <span class="progress-bar-step">2</span>
-        <span class="progress-line"></span>
-        <span class="progress-bar-step">3</span>
-        <span class="progress-line"></span>
-        <span class="progress-bar-step">4</span>
+        <span class="progress-bar-step pbs-1">1</span>
+        <span class="progress-line pbs-2"></span>
+        <span class="progress-bar-step pbs-2">2</span>
+        <span class="progress-line pbs-3"></span>
+        <span class="progress-bar-step pbs-3">3</span>
+        <span class="progress-line pbs-4"></span>
+        <span class="progress-bar-step pbs-4">4</span>
       </div>
       
       <hr>
@@ -72,18 +72,18 @@
         <p>Please tell us about your skill in frontend development</p>
         <div class="btn-group d-grid gap-2">
           <div class="row">
-            <button type="button" name="" id="" class="btn btn-outline-dark col mx-3  my-3">
-              <i class="fa-solid fa-leaf"></i> Beginner
+            <button type="button" name="" id="" class="btn btn-outline-dark col mx-2 my-2">
+              <i class="fa-solid btn-icon fa-leaf me-2"></i> <span class="fw-bold">Beginner</span>
             </button>
-            <button type="button" name="" id="" class="btn btn-outline-dark col mx-3  my-3">
-              <i class="fa-regular fa-compass"></i> Intermediate
+            <button type="button" name="" id="" class="btn btn-outline-dark col mx-2 my-2">
+              <i class="fa-regular fa-compass me-2"></i> <span class="fw-bold">Intermediate</span>
             </button>
           <div class="w-100"></div>
-          <button type="button" name="" id="" class="btn btn-outline-dark col mx-3  my-3">
-            <i class="fa-solid fa-rocket"></i> Advanced
+          <button type="button" name="" id="" class="btn btn-outline-dark col mx-2 my-3">
+            <i class="fa-solid fa-rocket me-2"></i> <span class="fw-bold">Advanced</span>
           </button>
-          <button type="button" name="" id="" class="btn btn-outline-dark col mx-3  my-3">
-            <i class="fa-solid fa-trophy"></i> Expert
+          <button type="button" name="" id="" class="btn btn-outline-dark col mx-2  my-3">
+            <i class="fa-solid fa-trophy me-2"></i> <span class="fw-bold">Expert</span>
           </button>
           </div>
         </div>
@@ -94,24 +94,24 @@
         <p>Please tell us which frontend challenges you would like to participate in</p>
         <div class="btn-group" role="group" data-bs-toggle="buttons">
           <div class="row">
-            <label class="btn active mx-3 my-3 col">
+            <label class="btn chall-pref mx-3 my-3 col">
               <input type="checkbox" autocomplete="off"/>
               HTML/CSS/JS
             </label>
 
-            <label class="btn active mx-3  my-3 col">
+            <label class="btn chall-pref mx-3  my-3 col">
               <input type="checkbox" autocomplete="off"/>
               ReactJS
             </label>
 
             <div class="w-100"></div>
 
-            <label class="btn active mx-3 col">
+            <label class="btn chall-pref mx-3 col">
               <input type="checkbox" autocomplete="off"/>
               AngularJS
             </label>
 
-            <label class="btn active mx-3 col">
+            <label class="btn chall-pref mx-3 col">
               <input type="checkbox" autocomplete="off"/>
               Vue.js
             </label>
@@ -156,7 +156,7 @@
       </form>
 
       <div id="nav-bttns" class="row pb-4">
-        <hr>
+        <hr class="mt-3">
         <div id="left-bttns" class="col invisible">
           <button type="button" class="btn btn-outline-dark">
             Go Back
@@ -168,7 +168,7 @@
             Next Step 
           </button>
 
-          <button type="button" class="btn btn-outline-dark d-none">
+          <button type="button" id="submit-bttn" class="btn btn-outline-dark d-none">
             Submit
           </button>
         </div>

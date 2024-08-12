@@ -2,6 +2,7 @@
   --cc-orange: #f7795d;
   --cc-grey: #BDBDBD;
   --cc-body-bg: #F3F3E3;
+  --cc-dark: #212529;
 }
 * {
   padding: 0;
@@ -69,4 +70,33 @@ form > p{
 
 }
 
+.fa-leaf, .fa-compass, .fa-rocket, .fa-trophy{
+  color: var(--cc-orange);
+  font-size: 1.4rem;
+}
 
+#step2-form button{
+  border: 1px solid #BDBDBD;
+}
+
+#step2-form button:focus{
+  border-color: var(--cc-orange);
+}
+
+.chall-pref{
+  border: 1px solid #BDBDBD;
+}
+
+.chall-pref input:active{
+  color: var(--cc-orange);
+}
+
+.chall-pref:hover{
+  background-color: var(--cc-dark);
+  color: white;
+}
+
+.chall-pref input:checked{
+  background-color: var(--cc-orange);
+  border-color: var(--cc-orange);
+}
