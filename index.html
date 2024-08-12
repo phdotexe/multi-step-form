@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap and css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
+    
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="src/script.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/times-new-roman" rel="stylesheet">
+                
+    <title>Multi-step Form - FrontendPro Challenge</title>
+  </head>
+  <body>
+    <div class="top-text text-center pt-5">
+      <h1>Join our community of Developers</h1>
+      <p>To join our community and participate in frontend challenges <br>
+      Please fill out the following form
+      </p>
+    </div>
+
+    <div id="form-space" class="bg-white w-50 mx-auto px-5 rounded-3 shadow">
+      <div class="progress-bar">
+        <span class="progress-bar-step">1</span>
+        <span class="progress-line"></span>
+        <span class="progress-bar-step">2</span>
+        <span class="progress-line"></span>
+        <span class="progress-bar-step">3</span>
+        <span class="progress-line"></span>
+        <span class="progress-bar-step">4</span>
+      </div>
+      
+      <hr>
+      <form action="" id="step1-form" class="px-3 py-3">
+        
+        <h3>Personal Information</h3>
+        <p>Please provide your personal details so we can get to know you better</p>
+        <div class="row">
+          <div class="mb-3 mt-3 col">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="name" class="form-control" id="name" placeholder="Your full name" name="name">
+          </div>
+          <div class="mb-3 mt-3 col">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="yourmail@email.com" name="email">
+          </div>
+          <div class="w-100"></div>
+          <div class="mb-3 mt-3 col">
+            <label for="phone" class="form-label">Phone Number</label>
+            <!-- when you get to js make separate the inputs +234 from the rest by a space -->
+            <input type="tel" class="form-control" id="phone" placeholder="+234 123456789" name="phone">
+          </div>
+          <div class="mb-3 mt-3 col">
+            <label for="portfolio" class="form-label">Portfolio/Github Link</label>
+            <input type="text" class="form-control" id="portfolio" placeholder="github.com/yourusername" name="portfolio">
+          </div>
+        </div>
+      </form>
+
+      <form action="" id="step2-form" class="">
+        <h3>Skill Level</h3>
+        <p>Please tell us about your skill in frontend development</p>
+        <div class="btn-group d-grid gap-2">
+          <div class="row">
+            <button type="button" name="" id="" class="btn btn-outline-dark col">
+              Beginner
+            </button>
+            <button type="button" name="" id="" class="btn btn-outline-dark col">
+              Intermediate
+            </button>
+          <div class="w-100"></div>
+          <button type="button" name="" id="" class="btn btn-outline-dark col">
+            Advanced
+          </button>
+          <button type="button" name="" id="" class="btn btn-outline-dark col">
+            Expert
+          </button>
+          </div>
+        </div>
+      </form>
+
+      <form id="step3-form" class="">
+        <h3>Challenge Preference</h3>
+        <p>Please tell us which frontend challenges you would like to participate in</p>
+        <div class="btn-group" role="group" data-bs-toggle="buttons">
+          <div class="row">
+            <label class="btn active mx-3">
+              <input type="checkbox" autocomplete="off"/>
+              HTML/CSS/JS
+            </label>
+
+            <label class="btn active mx-3">
+              <input type="checkbox" autocomplete="off"/>
+              ReactJS
+            </label>
+          </div>
+          <div class="row">
+            <label class="btn active mx-3">
+              <input type="checkbox" autocomplete="off"/>
+              AngularJS
+            </label>
+
+            <label class="btn active mx-3">
+              <input type="checkbox" autocomplete="off"/>
+              Vue.js
+            </label>
+          </div>
+        </div>
+        
+      </form>
+
+      <form action="" id="step4-form" class="">
+        <h3>Review and Confirm</h3>
+        <p>Please review your information to make sure that everything is accurate</p>
+        <div id="user-info">
+          <div class="row">
+            <span class="card user-info-item col-4">
+              <h6>Full Name</h6>
+              <p>ph</p>
+            </span>
+            <span class="card user-info-item col-4">
+              <h6>Email Address</h6>
+              <p>ph</p>
+            </span>
+            <span class="card user-info-item col-4">
+              <h6>Phone Number</h6>
+              <p>ph</p>
+            </span>
+          </div>
+          <div class="row">
+            <span class="card user-info-item col-4">
+              <h6>Portfolio/Github Link</h6>
+              <p>ph</p>
+            </span>
+            <span class="card user-info-item col-4">
+              <h6>Skill Level</h6>
+              <p>ph</p>
+            </span>
+            <span class="card user-info-item col-4">
+              <h6>Challenge Preference</h6>
+              <p>ph</p>
+            </span>
+          </div>
+        </div>
+      </form>
+
+      <div id="nav-bttns" class="row pb-4">
+        <hr>
+        <div id="left-bttns" class="col invisible">
+          <button type="button" class="btn btn-outline-dark">
+            Go Back
+          </button>
+        </div>
+
+        <div id="right-bttns" class="col d-flex justify-content-end">
+          <button type="button" id="next-bttn" class="btn btn-outline-dark">
+            Next Step 
+          </button>
+
+          <button type="button" class="btn btn-outline-dark d-none">
+            Submit
+          </button>
+        </div>
+
+      </div>
+    </div>
+    
+  </body>
+</html>

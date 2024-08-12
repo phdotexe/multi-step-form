@@ -1,0 +1,66 @@
+:root{
+  --cc-orange: #f7795d;
+  --cc-grey: #BDBDBD;
+  --cc-body-bg: #F3F3E3;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--cc-body-bg);
+}
+
+h1, h2, p, span{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#step2-form,
+#step3-form,
+#step4-form{
+  display: none;
+}
+
+.progress-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.progress-bar > span:first-child{
+  background-color: var(--cc-orange);
+}
+
+.progress-bar-step{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: var(--cc-grey);
+  border-radius: 100%;
+}
+
+.progress-line{
+  flex-grow: 1;
+  margin: 0 10px;
+  width: 5rem;
+  height: 5px;
+  background-color: var(--cc-grey);  
+  border-radius: 2px;
+}
+
+.right-bttns > button{
+  background-color: var(--cc-orange);
+}
+
+form > p{
+  color: #8d8383;
+}
+
+
+
