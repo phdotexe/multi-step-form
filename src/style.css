@@ -20,7 +20,8 @@ h1, h2, p, span{
 
 #step2-form,
 #step3-form,
-#step4-form{
+#step4-form, 
+#submit-bttn{
   display: none;
 }
 
@@ -75,12 +76,23 @@ form > p{
   font-size: 1.4rem;
 }
 
-#step2-form button{
+#step2-form input{
   border: 1px solid #BDBDBD;
 }
 
-#step2-form button:focus{
+#step2-form .form-check-input:checked 
++ .form-check-label{
   border-color: var(--cc-orange);
+  /* background-color: var(--cc-dark);
+  color: white; */
+}
+
+#step3-form input{
+  accent-color: #fff;
+}
+
+#step3-form input:checked{
+  accent-color: var(--cc-orange);
 }
 
 .chall-pref{
@@ -99,4 +111,16 @@ form > p{
 .chall-pref input:checked{
   background-color: var(--cc-orange);
   border-color: var(--cc-orange);
+}
+
+.user-info-item{
+  background-color: #f1efef;
+}
+
+.user-info-item > h6{
+  color: #4b4949;
+}
+
+.user-info-item > p{
+  color: var(--cc-dark);
 }

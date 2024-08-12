@@ -1,5 +1,38 @@
 // write your JavaScript here
 $(document).ready(function(){
+    const nameRegex = /^[a-zA-Z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^(234|0|\+234)\d{10}$/;
+
+    function validateName(){
+        const nameInput = $('#name');
+        if (!nameRegex.test(nameInput.val())){
+            nameInput.addClass('is-invalid');
+        } else{
+            nameInput.removeClass('is-invalid');
+        }
+    }
+
+    function validateEmail(){
+        const emailInput = $('#email');
+	    if (!emailRegex.test(emailInput.val())){
+		    emailInput.addClass('is-invalid');
+	    }
+	    else{
+		    emailInput.removeClass('is-invalid');
+	    }
+    }
+
+    function validatePhone(){
+        const phoneInput = $('#phone');
+        if(!phoneRegex.test(phoneInput.val())){
+            phoneInput.addClass('is-invalid');
+        } else{
+            phoneInput.removeClass('is-invalid');
+        }
+    }
+
+
     $("#next-bttn").click(function(){
         if($("#step1-form").is(":visible")){
             $("#step1-form").hide();
@@ -13,7 +46,7 @@ $(document).ready(function(){
         } else if($("#step3-form").is(":visible")){
             $("#step3-form").hide();
             $("#step4-form").show();
-            // $("#next-bttn").hide();
+            $("#next-bttn").hide();
             $("#submit-bttn").show();
             $(".pbs-4").css("background-color", "#f7795d");
         } 
@@ -34,38 +67,13 @@ $(document).ready(function(){
             $("#step4-form").hide();
             $("#step3-form").show();
             $("#left-bttns").show();
+            $("#submit-bttn").hide();
+            $("#next-bttn").show();
             $(".pbs-4").css("background-color", "#BDBDBD");
         }
     });
-    // $("#next-bttn").click(function(){
 
-    //     if($("#step1-form").is(":visible")){
-    //         var currentStep = 1;
-    //     }
-        
-
-    //     console.log('step' + currentStep + 'form');
-    //     $('#step' + currentStep + '-form').hide();
-    //     currentStep++;
-    //     $('#step' + currentStep + '-form').show();
-
-    //     if(currentStep > 1){
-    //         $("#left-bttns").removeClass('invisible');
-    //     }
-
-    // });
-
-    // $("#next-bttn").click(function(){
-   
-    //     $('step'+ currentStep+'-form').hide();
-    //     currentStep++;
-    //     $("#step"+currentStep+"-form").show();
-
-    //     if(currentStep > 1){
-    //         $("#left-bttns").removeClass('invisible');
-    //     }
-    //     var progressBarSteps = $('.progress-bar-step');
-    //     var currentProgressStep = progressBarSteps.eq(currentStep - 1);
-    //     currentProgressStep.addClass('active');
-    // });
+    $('#name').on("blur", validateName);
+    $('#email').on("blur", validateEmail);
+    $('#phone').on("blur", validatePhone);
 });

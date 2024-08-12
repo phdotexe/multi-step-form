@@ -41,14 +41,14 @@
       </div>
       
       <hr>
-      <form action="" id="step1-form" class="px-3 py-3">
+      <form action="backend/process.php" id="step1-form" class="px-3 py-3">
         
         <h3>Personal Information</h3>
         <p>Please provide your personal details so we can get to know you better</p>
         <div class="row">
           <div class="mb-3 mt-3 col">
             <label for="name" class="form-label">Full Name</label>
-            <input type="name" class="form-control" id="name" placeholder="Your full name" name="name">
+            <input type="name" class="form-control" id="name" placeholder="Your full name" name="fullName">
           </div>
           <div class="mb-3 mt-3 col">
             <label for="email" class="form-label">Email Address</label>
@@ -58,61 +58,74 @@
           <div class="mb-3 mt-3 col">
             <label for="phone" class="form-label">Phone Number</label>
             <!-- when you get to js make separate the inputs +234 from the rest by a space -->
-            <input type="tel" class="form-control" id="phone" placeholder="+234 123456789" name="phone">
+            <input type="tel" class="form-control" id="phone" placeholder="+234 123456789" name="phoneNumber">
           </div>
           <div class="mb-3 mt-3 col">
             <label for="portfolio" class="form-label">Portfolio/Github Link</label>
-            <input type="text" class="form-control" id="portfolio" placeholder="github.com/yourusername" name="portfolio">
+            <input type="text" class="form-control" id="portfolio" placeholder="github.com/yourusername" name="portfolioLink">
           </div>
         </div>
       </form>
 
-      <form action="" id="step2-form" class="">
+      <form action="backend/process.php" id="step2-form" class="">
         <h3>Skill Level</h3>
         <p>Please tell us about your skill in frontend development</p>
         <div class="btn-group d-grid gap-2">
           <div class="row">
-            <button type="button" name="" id="" class="btn btn-outline-dark col mx-2 my-2">
-              <i class="fa-solid btn-icon fa-leaf me-2"></i> <span class="fw-bold">Beginner</span>
-            </button>
-            <button type="button" name="" id="" class="btn btn-outline-dark col mx-2 my-2">
-              <i class="fa-regular fa-compass me-2"></i> <span class="fw-bold">Intermediate</span>
-            </button>
-          <div class="w-100"></div>
-          <button type="button" name="" id="" class="btn btn-outline-dark col mx-2 my-3">
-            <i class="fa-solid fa-rocket me-2"></i> <span class="fw-bold">Advanced</span>
-          </button>
-          <button type="button" name="" id="" class="btn btn-outline-dark col mx-2  my-3">
-            <i class="fa-solid fa-trophy me-2"></i> <span class="fw-bold">Expert</span>
-          </button>
+            <div class="form-check col mx-2 my-2">
+              <input class="form-check-input d-none" type="radio" name="skillLevel" id="beginner" value="Beginner">
+              <label class="form-check-label btn btn-outline-dark w-100" for="beginner">
+                <i class="fa-solid btn-icon fa-leaf me-2"></i> <span class="fw-bold">Beginner
+              </label>
+            </div>
+            <div class="form-check col mx-2 my-2">
+              <input class="form-check-input d-none" type="radio" name="skillLevel" id="intermediate" value="Intermediate">
+              <label class="form-check-label btn btn-outline-dark w-100" for="intermediate">
+                <i class="fa-regular fa-compass me-2"></i> <span class="fw-bold">Intermediate
+              </label>
+            </div>
+            <div class="w-100"></div>
+            <div class="form-check col mx-2 my-3">
+              <input class="form-check-input d-none" type="radio" name="skillLevel" id="advanced" value="Advanced">
+              <label class="form-check-label btn btn-outline-dark w-100" for="advanced">
+                <i class="fa-solid fa-rocket me-2"></i> <span class="fw-bold">Advanced
+              </label>
+            </div>
+            <div class="form-check col mx-2 my-3">
+              <input class="form-check-input d-none" type="radio" name="skillLevel" id="expert" value="Expert">
+              <label class="form-check-label btn btn-outline-dark w-100" for="expert">
+                <i class="fa-solid fa-trophy me-2"></i> <span class="fw-bold">Expert
+              </label>
+            </div>
           </div>
         </div>
       </form>
 
-      <form id="step3-form" class="">
+
+      <form action="backend/process.php" id="step3-form" class="">
         <h3>Challenge Preference</h3>
         <p>Please tell us which frontend challenges you would like to participate in</p>
         <div class="btn-group" role="group" data-bs-toggle="buttons">
           <div class="row">
             <label class="btn chall-pref mx-3 my-3 col">
-              <input type="checkbox" autocomplete="off"/>
+              <input type="checkbox" autocomplete="off" name="challengePreferences"/>
               HTML/CSS/JS
             </label>
 
             <label class="btn chall-pref mx-3  my-3 col">
-              <input type="checkbox" autocomplete="off"/>
+              <input type="checkbox" autocomplete="off" name="challengePreferences"/>
               ReactJS
             </label>
 
             <div class="w-100"></div>
 
             <label class="btn chall-pref mx-3 col">
-              <input type="checkbox" autocomplete="off"/>
+              <input type="checkbox" autocomplete="off" name="challengePreferences"/>
               AngularJS
             </label>
 
             <label class="btn chall-pref mx-3 col">
-              <input type="checkbox" autocomplete="off"/>
+              <input type="checkbox" autocomplete="off" name="challengePreferences"/>
               Vue.js
             </label>
           </div>
@@ -125,32 +138,33 @@
         <p>Please review your information to make sure that everything is accurate</p>
         <div id="user-info">
           <div class="row">
-            <span class="card user-info-item col-4">
-              <h6>Full Name</h6>
-              <p>ph</p>
-            </span>
-            <span class="card user-info-item col-4">
-              <h6>Email Address</h6>
-              <p>ph</p>
-            </span>
-            <span class="card user-info-item col-4">
-              <h6>Phone Number</h6>
-              <p>ph</p>
-            </span>
-          </div>
-          <div class="row">
-            <span class="card user-info-item col-4">
-              <h6>Portfolio/Github Link</h6>
-              <p>ph</p>
-            </span>
-            <span class="card user-info-item col-4">
-              <h6>Skill Level</h6>
-              <p>ph</p>
-            </span>
-            <span class="card user-info-item col-4">
-              <h6>Challenge Preference</h6>
-              <p>ph</p>
-            </span>
+          <span class="card user-info-item col mx-2 my-2">
+            <h6>Full Name</h6>
+            <p>ph</p>
+          </span>
+          <span class="card user-info-item col mx-2 my-2">
+            <h6>Email Address</h6>
+            <p>ph</p>
+          </span>
+          <span class="card user-info-item col mx-2 my-2">
+            <h6>Phone Number</h6>
+            <p>ph</p>
+          </span>
+
+          <div class="w-100"></div>
+
+          <span class="card user-info-item col mx-2 my-2">
+            <h6>Portfolio/Github Link</h6>
+            <p>ph</p>
+          </span>
+          <span class="card user-info-item col mx-2 my-2">
+            <h6>Skill Level</h6>
+            <p>ph</p>
+          </span>
+          <span class="card user-info-item col mx-2 my-2">
+            <h6>Challenge Preference</h6>
+            <p>ph</p>
+          </span>
           </div>
         </div>
       </form>
@@ -168,13 +182,16 @@
             Next Step 
           </button>
 
-          <button type="button" id="submit-bttn" class="btn btn-outline-dark d-none">
+          <button type="button" id="submit-bttn" class="btn btn-outline-dark">
             Submit
           </button>
         </div>
 
       </div>
     </div>
-    
+
   </body>
 </html>
+
+
+
