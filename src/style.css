@@ -62,5 +62,11 @@ form > p{
   color: #8d8383;
 }
 
+#step1-form input:focus{
+  border-color: var(--cc-orange);
+  outline: 0;
+  box-shadow: 0 0 0 .1rem var(--cc-orange);
+
+}
 
 
